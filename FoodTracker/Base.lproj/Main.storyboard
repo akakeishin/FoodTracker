@@ -20,8 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="T3g-MQ-URS">
-                                <frame key="frameInset" minX="16" minY="80" width="343" height="460"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="T3g-MQ-URS">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="料理名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lx6-Hb-hBg">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -40,9 +39,13 @@
                                         </connections>
                                     </button>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Qve-QC-Fq7">
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Qve-QC-Fq7" secondAttribute="height" multiplier="1:1" id="cgl-3u-9rF"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="ixg-Jp-mo5" appends="YES" id="eDJ-TS-qnR"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -61,9 +64,15 @@
                     <connections>
                         <outlet property="mealNameLabel" destination="lx6-Hb-hBg" id="l1f-9D-B2m"/>
                         <outlet property="nameTextField" destination="oar-oH-MKr" id="Pe2-Cv-9bm"/>
+                        <outlet property="photoImageView" destination="Qve-QC-Fq7" id="1ua-9g-zG6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ixg-Jp-mo5">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="Toe-Qa-wBI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="126.38680659670166"/>
         </scene>
