@@ -20,7 +20,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="T3g-MQ-URS">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="T3g-MQ-URS">
+                                <frame key="frameInset" minX="16" minY="80" width="343" height="522"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="料理名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lx6-Hb-hBg">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -47,6 +48,10 @@
                                             <outletCollection property="gestureRecognizers" destination="ixg-Jp-mo5" appends="YES" id="eDJ-TS-qnR"/>
                                         </connections>
                                     </imageView>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ab7-2I-7Ir" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <frame key="frameInset" minY="472" width="240" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="oar-oH-MKr" firstAttribute="leading" secondItem="T3g-MQ-URS" secondAttribute="leading" id="Qls-nE-rqj"/>
